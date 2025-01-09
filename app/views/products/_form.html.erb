@@ -1,0 +1,26 @@
+<%= form_with model: product do |form| %>
+    <div>
+      <%= form.label :Tên %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+        <%= form.label :Giá %>
+        <%= form.text_field :price %>
+    </div>
+
+    <div>
+      <%= form.label :"Mô tả", style: "display: block" %>
+      <%= form.rich_text_area :description %>
+   </div>
+
+   <div>
+     <%= form.label :"Ảnh", style: "display: block" %>
+     <%= form.file_field :featured_image, accept: "image/*" %>
+   </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+  
