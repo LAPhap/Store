@@ -1,9 +1,10 @@
-<%= image_tag @product.featured_image if @product.featured_image.attached? %>
-<h1><%= @product.name %></h1>
-<p>Giá: <%= @product.price %></p>
-<%= @product.description %>
+<%= image_tag @product.featured_image, class: "product-image" if @product.featured_image.attached? %>
+<h1 class="product-title"><%= @product.name %></h1>
+<p class="product-price">Giá: <%= @product.price %></p>
+<p class="product-description"><%= @product.description %></p>
 
-
-<%= link_to "Quay lại", products_path %>
-<%= link_to "sửa", edit_product_path(@product) %>
-<%= button_to "Xóa", @product, method: :delete, data: { turbo_confirm: "Bạn chắc chưa?" } %>
+<div class="product-links">
+  <%= link_to "Quay lại", products_path, class: "product-link" %>
+  <%= link_to "Sửa", edit_product_path(@product), class: "product-link" %>
+  <%= button_to "Xóa", @product, method: :delete, data: { turbo_confirm: "Bạn chắc chưa?" }, class: "product-button" %>
+</div>

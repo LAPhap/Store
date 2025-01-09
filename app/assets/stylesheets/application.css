@@ -1,10 +1,289 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+/* Căn bản cho form */
+.form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-submit:hover {
+    background-color: #45a049;
+  }
+  
+  /* Căn bản cho tiêu đề và các liên kết */
+  .page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .cancel-link, .back-link, .new-product-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .cancel-link {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .cancel-link:hover {
+    background-color: #d32f2f;
+  }
+  
+  .back-link {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  .back-link:hover {
+    background-color: #0056b3;
+  }
+  
+  .new-product-link {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .new-product-link:hover {
+    background-color: #45a049;
+  }
+  
+  /* Danh sách sản phẩm */
+  #products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .product-item {
+    width: 30%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .product-item .product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .product-item .product-price {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #4CAF50;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .form-group {
+      margin-bottom: 10px;
+    }
+  
+    .form-input {
+      padding: 12px;
+      font-size: 16px;
+    }
+  
+    .form-submit {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+    }
+  
+    .page-title {
+      font-size: 1.8rem;
+    }
+  
+    .cancel-link, .back-link, .new-product-link {
+      padding: 12px 24px;
+      font-size: 16px;
+      width: 100%;
+    }
+  
+    #products {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-item {
+      width: 80%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .form-group {
+      margin-bottom: 8px;
+    }
+  
+    .form-label {
+      font-size: 14px;
+    }
+  
+    .form-input {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .form-submit {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+    }
+  
+    .page-title {
+      font-size: 1.6rem;
+    }
+  
+    .cancel-link, .back-link, .new-product-link {
+      padding: 8px 14px;
+      font-size: 14px;
+    }
+  
+    #products {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-item {
+      width: 100%;
+    }
+  }
+  
+  /* Căn bản cho trang chi tiết sản phẩm */
+  .product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .product-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .product-price {
+    font-size: 1.2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+  
+  .product-links {
+    text-align: center;
+  }
+  
+  .product-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 5px;
+  }
+  
+  .product-link:hover {
+    background-color: #0056b3;
+  }
+  
+  .product-button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .product-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .product-title {
+      font-size: 1.8rem;
+    }
+  
+    .product-price {
+      font-size: 1.1rem;
+    }
+  
+    .product-description {
+      font-size: 0.9rem;
+    }
+  
+    .product-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-link, .product-button {
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .product-title {
+      font-size: 1.6rem;
+    }
+  
+    .product-price {
+      font-size: 1rem;
+    }
+  
+    .product-description {
+      font-size: 0.9rem;
+    }
+  
+    .product-link, .product-button {
+      width: 100%;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+  }
+  

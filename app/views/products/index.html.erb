@@ -1,12 +1,12 @@
-<h1>Sản phẩm</h1>
+<h1 class="page-title">Sản phẩm</h1>
 
-<%= link_to "New product", new_product_path %>
+<%= link_to "New product", new_product_path, class: "new-product-link" %>
 
 <div id="products">
   <% @products.each do |product| %>
-    <div>
-      <%= link_to product.name, product %>
-      <%= product.price %>
+    <div class="product-item">
+      <%= link_to product.name, product, class: "product-name" %>
+      <span class="product-price"><%= product.price %></span>
     </div>
   <% end %>
 </div>
